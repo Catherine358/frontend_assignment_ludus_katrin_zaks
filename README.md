@@ -1,6 +1,6 @@
 ##Front End Interview. Technical Task
 
-Small application created with [Create React App](https://github.com/facebook/create-react-app), Redux, TypeScript and CSS.
+Small application created with [Create React App](https://github.com/facebook/create-react-app), Redux and SCSS.
 Displays the list of challenges and allows to view specific challenge data, author and questions as well as to add challenge to favourites.
 
 ### Scope of functionalities
