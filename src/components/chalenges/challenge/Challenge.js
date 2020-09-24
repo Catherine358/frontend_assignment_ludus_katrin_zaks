@@ -22,7 +22,7 @@ const Challenge = ({ id }) => {
     if(error) {
         return (
             <Grid container direction="column" className="challenge-container">
-                <ErrorIndicator error={error}/>
+                <ErrorIndicator error={ error }/>
             </Grid>
         );
     }
@@ -38,10 +38,16 @@ const Challenge = ({ id }) => {
                       }}/>
                       <Grid container item sm={7} direction="column" className="challenge-info">
                           <p className="name-date">
-                              { challengeData.challengeName + " - " + Moment(challengeData.createdAt).format('DD MMM YYYY') }
+                              {
+                                  challengeData.challengeName +
+                                  " - " +
+                                  Moment(challengeData.createdAt).format('DD MMM YYYY')
+                              }
                           </p>
                           <div className="author-container">
-                              <div className="author-icon" style={{ backgroundImage: `url(${challengeData.author.icon})` }}/>
+                              <div className="author-icon"
+                                   style={{ backgroundImage: `url(${ challengeData.author.icon })` }}
+                              />
                               <p className="author-name">
                                   { challengeData.author.firstName + " " + challengeData.author.lastName }
                               </p>
@@ -49,9 +55,10 @@ const Challenge = ({ id }) => {
                       </Grid>
                   </Grid>
                   <Grid container direction="row" className="questions">
-                      { challengeData.questions.map(question => {
-                          return <Question key={question.question} question={question}/>;
-                      }) }
+                      {
+                          challengeData.questions.map(question => {
+                          return <Question key={ question.question } question={ question }/>;})
+                      }
                   </Grid>
             </>
           }

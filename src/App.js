@@ -27,7 +27,7 @@ const App = () => {
             return (
                 <div className="wrapper">
                     <Header {...props} page=""/>
-                    <Challenge {...props} id={id}/>
+                    <Challenge {...props} id={ id }/>
                 </div>
             )
         }}/>

@@ -1,7 +1,7 @@
 import { BASE_URL } from "../constants/Constants";
 
-export const getChallengesList = (sortParam, pageNum) => {
-    return fetch(`${BASE_URL}?sortBy=${sortParam}&page=${pageNum}`)
+export const getChallengesList = (sortParam, pageNum, sortDir, limit) => {
+    return fetch(`${BASE_URL}?sortBy=${sortParam}&page=${pageNum}&sortDirection=${sortDir}&limit=${limit}`)
         .then(response => {
             if(response.status !== 200) {
                 throw new Error('Could not fetch.')

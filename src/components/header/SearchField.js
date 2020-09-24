@@ -55,8 +55,8 @@ const SearchField = (props) => {
                       filteredResults.length === 0 ? "No more results" :
                        filteredResults.map(result => {
                           return (
-                            <Link key={result.challengeId} to={`/challenge/${result.challengeId}`}>
-                                <p>{result.challengeName}</p>
+                            <Link key={ result.challengeId } to={`/challenge/${ result.challengeId }`}>
+                                <p>{ result.challengeName }</p>
                             </Link>
                           );
                       })
@@ -72,11 +72,11 @@ const SearchField = (props) => {
                  name="query"
                  placeholder="Search"
                  className="search-input"
-                 value={query}
-                 onChange={inputChangeHandler}
+                 value={ query }
+                 onChange={ inputChangeHandler }
           />
-          { message && <div className="search-results">{message}</div> }
-          { isLoading && <div className="search-results">Loading...</div>}
+          { message && <div className="search-results">{ message }</div> }
+          { isLoading && <div className="search-results">Loading...</div> }
           { query && renderSearchResults() }
       </div>
     );
