@@ -21,10 +21,10 @@ const challengesError = (error) => {
     };
 };
 
-export const fetchChallenges = (sortParam, pageNum, sortDir) => {
+export const fetchChallenges = (sortParam, pageNum, sortDir, limit) => {
     return async (dispatch) => {
         dispatch(challengesRequested());
-        await getChallengesList(sortParam, pageNum, sortDir)
+        await getChallengesList(sortParam, pageNum, sortDir, limit)
             .then(data => dispatch(challengesLoaded(data)))
             .catch(error => dispatch(challengesError(error.message)));
     };
