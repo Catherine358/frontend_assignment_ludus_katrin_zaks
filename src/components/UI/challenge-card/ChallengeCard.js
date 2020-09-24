@@ -11,7 +11,11 @@ const ChallengeCard = ({ fav, challenge, updateFavs }) => {
 
     return (
       <Grid container direction="row" className="challenge-card">
-          <Grid container item sm={5} className="challenge-icon" style={{ backgroundImage: `url(${ challenge.challengeImage })` }}/>
+          <Grid container
+                item sm={5}
+                className="challenge-icon"
+                style={{ backgroundImage: `url(${ challenge.challengeImage })` }}
+          />
           <Grid container item sm={6} className="challenge-info">
               <p className="challenge-name">
                   { challenge.challengeName }
@@ -27,8 +31,12 @@ const ChallengeCard = ({ fav, challenge, updateFavs }) => {
                           }}/>
                   }
               </p>
-              <p className="number-questions"><span>Number of questions: </span>{ challenge.numberOfQuestions }</p>
-              <p className="creation-date"><span>Created at: </span>{ Moment(challenge.createdAt).format('DD MMM YYYY') }</p>
+              <p className="number-questions">
+                  <span>Number of questions: </span>{ challenge.numberOfQuestions }
+              </p>
+              <p className="creation-date">
+                  <span>Created at: </span>{ Moment(challenge.createdAt).format('DD MMM YYYY') }
+              </p>
               <div className="challenges-list-btn-container">
                   <Link to={`/challenge/${ challenge.challengeId }`}>
                     <Button variant="contained" className="challenge-view-btn">View Challenge</Button>

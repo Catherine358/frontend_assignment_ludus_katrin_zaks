@@ -50,12 +50,12 @@ const Challenges = (props) => {
             </Grid>
             <Grid container direction="row" justify="space-around">
                 {
-                    error ? <ErrorIndicator error={error}/> :
+                    error ? <ErrorIndicator error={ error }/> :
                         challengesList ?
                             challengesList.length > 0 ?
-                                challengesList.map(challenge => <ChallengeCard key={challenge.challengeId}
-                                                                               challenge={challenge}
-                                                                               updateFavs={updateFavsListHandler}/>)
+                                challengesList.map(challenge => <ChallengeCard key={ challenge.challengeId }
+                                                                               challenge={ challenge }
+                                                                               updateFavs={ updateFavsListHandler }/>)
                                 : <div>There are no challenges</div>
                         : <Spinner/>
                 }
@@ -64,7 +64,7 @@ const Challenges = (props) => {
                 <Button variant="contained" disabled={ page <= 1 } onClick={() => {
                     setPage(page - 1);
                 }}>Prev</Button>
-                <span className="page-num">{page}</span>
+                <span className="page-num">{ page }</span>
                 <Button variant="contained" disabled={ page >= totalPagesNum } onClick={() => {
                     setPage(page + 1);
                 }}>Next</Button>
