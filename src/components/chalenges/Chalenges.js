@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import Grid from "@material-ui/core/Grid";
-import Button from "@material-ui/core/Button";
+import Pagination from "@material-ui/lab/Pagination";
 import './challengesList.scss';
 import ChallengeCard from "../UI/challenge-card";
 
@@ -69,13 +69,13 @@ const Challenges = (props) => {
                 }
             </Grid>
             <Grid container direction="row" justify="center" alignItems="center" className="pagination-container">
-                <Button variant="contained" disabled={ page <= 1 } onClick={() => {
-                    setPage(page - 1);
-                }}>Prev</Button>
-                <span className="page-num">{ page }</span>
-                <Button variant="contained" disabled={ page >= totalPagesNum } onClick={() => {
-                    setPage(page + 1);
-                }}>Next</Button>
+                {
+                    challengesList && <Pagination count={totalPagesNum}
+                                                  page={page}
+                                                  onChange={(event, page) => {
+                                                      setPage(page);
+                                                  }}/>
+                }
             </Grid>
         </Grid>
     );
