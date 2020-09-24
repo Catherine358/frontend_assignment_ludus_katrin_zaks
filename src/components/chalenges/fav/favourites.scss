@@ -1,0 +1,21 @@
+$green: #8DBFAC;
+
+.fav-challenges-list {
+  font-family: "Montserrat Medium", sans-serif;
+  color: $green;
+  text-align: center;
+
+  h1 {
+    margin: 20px auto 0;
+  }
+
+  .warning {
+    height: 400px;
+    margin: auto;
+    padding: 10px;
+    background-image: url("../../../img/crying_cat.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-align: center;
+  }
+}

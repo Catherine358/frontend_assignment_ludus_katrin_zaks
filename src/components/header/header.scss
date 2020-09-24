@@ -1,0 +1,73 @@
+$green: #8DBFAC;
+$grayForShadow: #00000029;
+$yellow: #FFE18B;
+
+.header {
+  background-color: $green;
+  box-shadow: 0 3px 6px $grayForShadow;
+  font-family: "Montserrat Bold", sans-serif;
+  font-size: 20px;
+  color: white;
+
+  span.active {
+    color: $yellow;
+    text-decoration: underline;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  a:active {
+    color: $yellow;
+  }
+
+  span {
+    margin: 0 0 0 20px;
+  }
+
+  .search-field {
+    margin: 0 10% 0 auto;
+
+    input {
+      width: 180px;
+      border: none;
+      padding: 0.3rem;
+    }
+
+    .search-results {
+      padding: 0.3rem;
+      position: absolute;
+      background-color: white;
+      font-size: 12px;
+      border: 1px solid $green;
+      width: 180px;
+      z-index: 1;
+      color: #393939;
+
+      a {
+        color: #393939;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 420px){
+  .header {
+    flex-direction: column;
+    justify-content: space-around;
+
+    .nav-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 66%;
+    }
+
+    .search-field {
+      height: 33%;
+      margin: 0;
+    }
+  }
+}

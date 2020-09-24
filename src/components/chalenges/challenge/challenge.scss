@@ -1,0 +1,40 @@
+$green: #8DBFAC;
+
+.challenge-container {
+  padding: 20px;
+  font-family: "Montserrat Medium", sans-serif;
+  color: $green;
+
+  .details {
+    .challenge-icon-big {
+      width: 250px;
+      height: 250px;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .challenge-info {
+      padding-left: 20px;
+
+      .name-date {
+        font-size: 32px;
+        font-family: "Montserrat Bold", sans-serif;
+      }
+
+      .author-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .author-icon {
+          width: 75px;
+          height: 75px;
+          background-size: 100%;
+          background-repeat: no-repeat;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}

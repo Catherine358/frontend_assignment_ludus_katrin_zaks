@@ -1,0 +1,31 @@
+$green: #8DBFAC;
+
+.challenges-list {
+  .challenges-list-header {
+    margin-top: 10px;
+    font-family: "Montserrat Medium", sans-serif;
+    color: $green;
+
+    .challenges-list-select {
+      border: none;
+      background-color: transparent;
+      font-family: "Montserrat Medium", sans-serif;
+      font-size: 20px;
+      color: $green;
+    }
+
+    .challenges-list-select:active,
+    .challenges-list-select:focus {
+      outline: none;
+    }
+  }
+
+  .pagination-container {
+    margin: 15px 0 15px;
+
+    .page-num {
+      margin: 0 10px;
+      color: $green;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.wrapper {
+    display: grid;
+    grid-template-rows: 70px auto;
+    min-height: 100vh;
+}
+
+@media screen and (max-width: 420px){
+    .wrapper {
+        grid-template-rows: 100px auto;
+    }
+}

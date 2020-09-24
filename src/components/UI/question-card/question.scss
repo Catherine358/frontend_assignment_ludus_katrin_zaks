@@ -1,0 +1,26 @@
+$grayForShadow: #00000029;
+
+.question-container {
+  margin: 20px;
+  padding: 10px;
+  width: 40%;
+  font-family: "Montserrat Medium", sans-serif;
+  font-size: 12px;
+  background-color: $grayForShadow;
+  color: #393939;
+
+  p {
+    margin: 5px 0;
+
+    span {
+      font-family: "Montserrat Bold", sans-serif;
+    }
+  }
+}
+
+@media screen and (max-width: 799px){
+  .question-container {
+    width: 85%;
+  }
+}
+
