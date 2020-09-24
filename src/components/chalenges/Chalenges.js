@@ -12,6 +12,7 @@ import ErrorIndicator from "../../error-indicator";
 
 const Challenges = (props) => {
     const [sortParam, setSortParam] = useState('createdAt');
+    const [sortDirection, setSortDirection] = useState('asc');
     const [page, setPage] = useState(1);
     const challengesObj = useSelector(state => state.challenges.challenges);
     const error = useSelector(state => state.challenges.error);
@@ -22,8 +23,8 @@ const Challenges = (props) => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(fetchChallenges(sortParam, page));
-    }, [dispatch, sortParam, page]);
+        dispatch(fetchChallenges(sortParam, page, sortDirection));
+    }, [dispatch, sortParam, page, sortDirection]);
 
     const updateFavsListHandler = (upIndex, challenge) => {
         updateFavourites(upIndex, challenge, dispatch, favourites);
@@ -39,6 +40,12 @@ const Challenges = (props) => {
                     <option value="createdAt">Created At</option>
                     <option value="challengeName">Challenge Name</option>
                     <option value="numberOfQuestions">Number Of Questions</option>
+                </select>
+                <select className="challenges-list-select" onChange={(event) => {
+                    setSortDirection(event.target.value);
+                }}>
+                    <option value="asc">Low to High</option>
+                    <option value="dsc">High to Low</option>
                 </select>
             </Grid>
             <Grid container direction="row" justify="space-around">
